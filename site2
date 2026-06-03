@@ -1,0 +1,95 @@
+import React from "react";
+import "./App.css";
+
+function App() {
+  const movies = [
+    {
+      title: "Stranger Things",
+      image: "https://via.placeholder.com/250x350"
+    },
+    {
+      title: "Money Heist",
+      image: "https://via.placeholder.com/250x350"
+    },
+    {
+      title: "Wednesday",
+      image: "https://via.placeholder.com/250x350"
+    }
+  ];
+
+  return (
+    <div className="app">
+      <nav className="navbar">
+        <h1>NETFLIX</h1>
+      </nav>
+
+      <div className="banner">
+        <h2>Unlimited Movies, TV Shows and More</h2>
+      </div>
+
+      <div className="movies">
+        {movies.map((movie, index) => (
+          <div className="card" key={index}>
+            <img src={movie.image} alt={movie.title} />
+            <h3>{movie.title}</h3>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default App;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:black;
+  color:white;
+  font-family:Arial,sans-serif;
+}
+
+.navbar{
+  background:#111;
+  padding:20px;
+}
+
+.navbar h1{
+  color:red;
+}
+
+.banner{
+  height:300px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba")
+  center/cover;
+}
+
+.banner h2{
+  background:rgba(0,0,0,0.6);
+  padding:20px;
+}
+
+.movies{
+  display:flex;
+  gap:20px;
+  padding:30px;
+}
+
+.card{
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:scale(1.1);
+}
+
+.card img{
+  width:250px;
+  border-radius:10px;
+}
