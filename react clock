@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="clock"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:black;
+}
+
+#clock{
+    color:white;
+    font-size:50px;
+    font-family:Arial;
+}
+function updateClock(){
+    let now = new Date();
+    document.getElementById("clock").innerText =
+    now.toLocaleTimeString();
+}
+
+setInterval(updateClock,1000);
