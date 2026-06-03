@@ -1,0 +1,109 @@
+const { useState, useEffect } = React;
+
+function App() {
+  return (
+    <div
+      style={{
+        width: "900px",
+        margin: "40px auto",
+        padding: "30px",
+        backgroundColor: "#fdf9ee",
+        border: "2px solid #888",
+        borderRadius: "12px",
+        textAlign: "center",
+        fontFamily: "Arial, sans-serif",
+      }}
+    >
+      <h1
+        style={{
+          color: "#b56b6b",
+          marginBottom: "40px",
+        }}
+      >
+        Product Showcase
+      </h1>
+
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          gap: "25px",
+          marginBottom: "30px",
+        }}
+      >
+        <div
+          style={{
+            width: "260px",
+            padding: "20px",
+            backgroundColor: "#cfe8ff",
+            border: "3px solid #5b8cff",
+            borderRadius: "14px",
+          }}
+        >
+          <h2 style={{ margin: "0 0 10px", color: "#355c9c" }}>
+            Wireless Mouse
+          </h2>
+
+          <p style={{ margin: "5px 0", color: "#ffffff" }}>
+            Price: ₹799
+          </p>
+
+          <p style={{ margin: "5px 0", color: "#ffffff" }}>
+            Category: Electronics
+          </p>
+        </div>
+
+        <div
+          style={{
+            width: "260px",
+            padding: "20px",
+            backgroundColor: "#8ee08a",
+            border: "3px solid #5da85b",
+            borderRadius: "14px",
+          }}
+        >
+          <h2 style={{ margin: "0 0 10px", color: "#2f6f2d" }}>
+            Running Shoes
+          </h2>
+
+          <p style={{ margin: "5px 0", color: "#ffffff" }}>
+            Price: ₹2499
+          </p>
+
+          <p style={{ margin: "5px 0", color: "#ffffff" }}>
+            Category: Footwear
+          </p>
+        </div>
+      </div>
+
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <div
+          style={{
+            width: "260px",
+            padding: "20px",
+            backgroundColor: "#ffc9d1",
+            border: "3px solid #e58b98",
+            borderRadius: "14px",
+          }}
+        >
+          <h2 style={{ margin: "0 0 10px", color: "#9c4c5d" }}>
+            Smart Watch
+          </h2>
+
+          <p style={{ margin: "5px 0", color: "#ffffff" }}>
+            Price: ₹3999
+          </p>
+
+          <p style={{ margin: "5px 0", color: "#ffffff" }}>
+            Category: Gadgets
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
